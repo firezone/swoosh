@@ -4,6 +4,7 @@
 
 ### ✨ Features
 
+- Add Azure Communication Services adapter @copilot-swe-agent (#1)
 - Make `deliver/1` and `deliver/2` overridable in `Swoosh.Mailer` @copilot-swe-agent (#1109)
 
 ## 1.22.1
