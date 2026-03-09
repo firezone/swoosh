@@ -122,7 +122,12 @@ defmodule Swoosh.Adapters.AzureCommunicationServices do
 
   defp hmac_headers(body, url, access_key) do
     uri = URI.parse(url)
-    host = uri.authority || uri.host
+    host =
+      if uri.port in [80, 443, nil] do
+        uri.host
+      else
+        "#{uri.host}:#{uri.port}"
+      end
     path_and_query = path_and_query(uri)
 
     content_hash = :crypto.hash(:sha256, body) |> Base.encode64()
