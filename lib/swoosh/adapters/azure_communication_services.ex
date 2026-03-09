@@ -239,9 +239,9 @@ defmodule Swoosh.Adapters.AzureCommunicationServices do
   defp resolve_auth({m, f, a}) when is_atom(m) and is_atom(f) and is_list(a), do: apply(m, f, a)
   defp resolve_auth(token) when is_binary(token), do: token
 
-  defp resolve_auth(auth) do
+  defp resolve_auth(_auth) do
     raise ArgumentError,
-          "expected :auth to be a string, a 0-arity function, or a {mod, fun, args} tuple, got: #{inspect(auth)}"
+          "expected :auth to be a string, a 0-arity function, or a {mod, fun, args} tuple"
   end
 
   defp prepare_body(email) do
