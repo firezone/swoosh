@@ -85,14 +85,17 @@ defmodule Swoosh.Adapters.AzureCommunicationServices do
   end
 
   defp validate_auth!(config) do
-    case {config[:access_key], config[:auth]} do
+    access_key = config[:access_key]
+    auth = config[:auth]
+
+    case {access_key, auth} do
       {nil, nil} ->
         raise ArgumentError,
-              "expected exactly one of [:access_key, :auth] to be set in config, got: #{inspect(config)}"
+              "expected exactly one of [:access_key, :auth] to be set in config, got: access_key: missing, auth: missing"
 
-      {access_key, auth} when not is_nil(access_key) and not is_nil(auth) ->
+      {ak, au} when not is_nil(ak) and not is_nil(au) ->
         raise ArgumentError,
-              "expected exactly one of [:access_key, :auth] to be set in config, got: #{inspect(config)}"
+              "expected exactly one of [:access_key, :auth] to be set in config, got: both access_key and auth set"
 
       _ ->
         :ok
