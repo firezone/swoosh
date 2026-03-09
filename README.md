@@ -156,7 +156,7 @@ included:
 | Postal       | [Swoosh.Adapters.Postal](https://hexdocs.pm/swoosh/Swoosh.Adapters.Postal.html#content)             |                  |
 | Lettermint   | [Swoosh.Adapters.Lettermint](https://hexdocs.pm/swoosh/Swoosh.Adapters.Lettermint.html#content)     |                  |
 | Resend       | [Swoosh.Adapters.Resend](https://hexdocs.pm/swoosh/Swoosh.Adapters.Resend.html#content)             |                  |
-| Azure Communication Services | [Swoosh.Adapters.AzureCommunicationServices](https://hexdocs.pm/swoosh/Swoosh.Adapters.AzureCommunicationServices.html#content) | |
+| Azure Communication Services | [Swoosh.Adapters.AzureCommunicationServices](https://hexdocs.pm/swoosh/Swoosh.Adapters.AzureCommunicationServices.html#content) |                  |
 | ------ | **Below are not fully featured services** | ------ |
 | Loops        | [Swoosh.Adapters.Loops](https://hexdocs.pm/swoosh/Swoosh.Adapters.Loops.html#content)               |                  |
 | PostUp       | [Swoosh.Adapters.PostUp](https://hexdocs.pm/swoosh/Swoosh.Adapters.PostUp.html#content)             |                  |
